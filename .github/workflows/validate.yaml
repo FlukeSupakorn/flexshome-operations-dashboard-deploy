@@ -9,6 +9,7 @@ on:
 permissions:
   contents: read
   actions: read
+  packages: read
 jobs:
   ci:
     uses: FlukeSupakorn/flexshome-platform/.github/workflows/validate-manifests.yaml@1eaecbc6073f3a5dcc34d2f9e900563bab180be7
