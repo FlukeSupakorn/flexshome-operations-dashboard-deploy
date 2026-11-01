@@ -1,0 +1,26 @@
+name: Manifest CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+permissions:
+  contents: read
+  actions: read
+  packages: read
+jobs:
+  ci:
+    uses: FlukeSupakorn/flexshome-platform/.github/workflows/validate-manifests.yaml@1eaecbc6073f3a5dcc34d2f9e900563bab180be7
+    with:
+      mode: manifest
+      application_id: operations-dashboard
+      source_repository: FlukeSupakorn/flexshome-operations-dashboard
+      source_repository_id: "1441966581"
+      source_workflow: .github/workflows/ci.yml
+      profile: grafana-dashboard
+      runner_label: flexshome-manifest-operations-dashboard
+      reader_app_id: ${{ vars.READER_APP_ID }}
+    secrets:
+      READER_APP_PRIVATE_KEY: ${{ secrets.READER_APP_PRIVATE_KEY }}

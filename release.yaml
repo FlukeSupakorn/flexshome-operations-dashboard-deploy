@@ -1,0 +1,10 @@
+apiVersion: flexshome.io/v1
+kind: Release
+metadata:
+  name: operations-dashboard
+spec:
+  sourceRepository: FlukeSupakorn/flexshome-operations-dashboard
+  sourceSha: 981a2246af5a3803545bf4f70a475ce1d4c7ee07
+  workflowRunId: "41334874047"
+  workflowRunAttempt: 1
+  configSha256: 7b78569c6a29b2c38d216d05783c118bb2c762394b170a0bb2b5cf3409c969c8
